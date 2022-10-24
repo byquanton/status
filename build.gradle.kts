@@ -22,20 +22,11 @@ dependencies {
     paperDevBundle(libs.versions.paper.api.get())
     bukkitLibrary(libs.cloud.paper)
     bukkitLibrary(libs.cloud.minecraft.extras)
-    compileOnly(libs.floodgate.api)
-    implementation(libs.customblockdata)
-    implementation(libs.morepersistentdatatypes)
 }
 
 tasks{
     assemble {
         dependsOn(reobfJar)
-    }
-
-    shadowJar{
-        fun reloc(pkg: String, name: String) = relocate(pkg, "com.kalimero2.team.survivalutils.shaded.$name")
-        reloc("com.jeff_media.customblockdata","customblockdata")
-        reloc("com.jeff_media.morepersistentdatatypes","morepersistentdatatypes")
     }
 }
 

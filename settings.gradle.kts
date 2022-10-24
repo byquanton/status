@@ -6,12 +6,6 @@ dependencyResolutionManagement{
 
             version("floodgate-api","2.0-SNAPSHOT")
             version("cloud", "1.7.1")
-            version("customblockdata","2.1.0")
-            version("morepersistentdatatypes","2.3.1")
-
-            library("floodgate-api","org.geysermc.floodgate","api").versionRef("floodgate-api")
-            library("customblockdata","com.jeff_media","CustomBlockData").versionRef("customblockdata")
-            library("morepersistentdatatypes","com.jeff_media","MorePersistentDataTypes").versionRef("morepersistentdatatypes")
 
             // Paper
             plugin("paper-run","xyz.jpenilla.run-paper").version("1.0.6")
