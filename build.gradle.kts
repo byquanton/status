@@ -1,21 +1,18 @@
 import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
 
 group = "me.byquanton.plugins"
-version = "1.0.1"
+version = "1.1.0"
 
 plugins {
     `java-library`
     alias(libs.plugins.paper.run)
     alias(libs.plugins.paper.userdev)
     alias(libs.plugins.plugin.yml)
-    alias(libs.plugins.shadow)
 }
 
 repositories {
     mavenCentral()
     maven("https://papermc.io/repo/repository/maven-public/")
-    maven("https://repo.opencollab.dev/maven-snapshots/")
-    maven("https://hub.jeff-media.com/nexus/repository/jeff-media-public/")
 }
 
 dependencies {
@@ -23,6 +20,11 @@ dependencies {
     bukkitLibrary(libs.cloud.paper)
     bukkitLibrary(libs.cloud.minecraft.extras)
 }
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+}
+
 
 tasks{
     assemble {
